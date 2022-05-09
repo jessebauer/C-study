@@ -1,0 +1,1 @@
+int age = console.readline()
