@@ -20,7 +20,7 @@ Ingrediente (#idIgrediente, nome, preco)
 
 ### Produto - Peça
 
-Produto (#IdProduto, peso, custo)
-Produto_Peca(#Produto_Peca,&IdProduto,&IdPeca)
-Peca (#IdPeca, material,custo)
+Produto (#IdProduto, peso, custo, preço, peso)
+Prod_Peça(#Produto_Peca,&IdProduto,&IdPeca,qntd)
+Peca (#IdPeca, material,custo, preço, peso)
 
