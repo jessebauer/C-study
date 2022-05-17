@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="estilo.css" </head>
+
+<body>
+    <h1>Formulários</h1>
+    <form>
+        <!-- Preencher lugar-->
+        <h2><b>Preencha com atenção</b> </h2>
+        <label for="nome">Primeiro Nome:</label> <br>
+        <input type="text" name="nome"> <br>
+        <label for="sobrenome">Segundo Nome:</label> <br>
+        <input type="text" name="sobrenome"> <br> <br>
+        <!--  -->
+        <input type="button" name="botao" value="Botão">
+        <!-- Submit junta tudo e envia para um lugar -->
+        <input type="submit" name="enviar" value="Enviar">
+        <!-- Reset = limpar -->
+        <input type="reset" name="reset" value="Limpar"> <br> <br> <br>
+        <!-- Radio buttom -->
+        <h2>O que você achou do site?</h2>
+        <input type="radio" name="opcao" checked>Muito bom
+        <input type="radio" name="opcao">Regular
+        <input type="radio" name="opcao">Ruim
+        <input type="radio" name="opcao">Muito ruim
+        <br>
+        <br>
+        <input type="button" name="botao" value="Botão">
+        <!-- Submit junta tudo e envia para um lugar -->
+        <input type="submit" name="enviar" value="Enviar">
+        <!-- Reset = limpar -->
+        <input type="reset" name="reset" value="Limpar"> <br> <br>
+        <h2>Como está o clima hoje?</h2>
+        <input type="radio" name="clima" value="sol" checked>Sol
+        <input type="radio" name="clima" value="chuva">Chuva
+        <input type="radio" name="clima" value="Nevoeiro">Nevoeiro <br> <br>
+        <input type="button" name="botao" value="Botão">
+        <!-- Submit junta tudo e envia para um lugar -->
+        <input type="submit" name="enviar" value="Enviar">
+        <!-- Reset = limpar -->
+        <input type="reset" name="reset" value="Limpar"> <br> <br>
+        <h2>Qual seção você mais gosta?</h2>
+        <select name="secao">
+            <option value="cartaz">Em cartaz</option>
+            <option value="animacao" selected>Animação</option>
+            <!--Atralho 'opt'-->
+            <option value="romance">Romance</option>
+        </select> Outra: <input type="text" name="outra">
+        <br> <br>
+        <input type="button" name="botao" value="Botão">
+        <!-- Submit junta tudo e envia para um lugar -->
+        <input type="submit" name="enviar" value="Enviar">
+        <!-- Reset = limpar -->
+        <input type="reset" name="reset" value="Limpar"> <br> <br>
+        <br>
+        <textarea placeholder="Digite um texto" name="areatexto" cols="20" rows="8" maxlength="180"
+            style="resize:none"></textarea>
+        <br>
+        <h2>Diga-nos como podemos entrar em contato</h2>
+        <table>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="nome"></td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td> <input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td>Telefone</td>
+                <td><input type="text" name="telefone"></td>
+            </tr>
+
+        </table>
+
+        <input type="button" name="botao" value="Botão">
+        <!-- Submit junta tudo e envia para um lugar -->
+        <input type="submit" name="enviar" value="Enviar">
+        <!-- Reset = limpar -->
+        <input type="reset" name="reset" value="Limpar"> <br> <br>
+    </form>
+    <br>
+    <input type="checkbox">Hoje está chovendo?
+    <input type="checkbox">Hoje está nevando?
+    <input type="checkbox">Hoje está ensolarado?
+    <br> <br>
+    <input type="button" name="botao" value="Botão">
+    <!-- Submit junta tudo e envia para um lugar -->
+    <input type="submit" name="enviar" value="Enviar">
+    <!-- Reset = limpar -->
+    <input type="reset" name="reset" value="Limpar"> <br> <br>
+    <br>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -52,7 +52,7 @@ Estado (#UF,Estado)
 Cidade (#idCidade,nome, &UF_estado)
 
 
-https://lucid.app/ → lucidchart
+https://www.lucidchart.com/pages/ → lucidchart
 Utilizar entidades relacionais
 
 =================================
