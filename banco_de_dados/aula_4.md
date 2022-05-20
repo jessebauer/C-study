@@ -38,35 +38,6 @@ Peca (#IdPeca, material,custo, preço, peso)
 
 
 
-departamento 1 --- N curso
-departamento(!)
-curso(!cod, denominacao, sigla)
-
-
-aluno N --- 1 curso
-aluno (!matricula, nome, endereco, fone, filiacao, dt_nasc)
-curso(!cod, denominacao, sigla)
-
-
-
-professor N -- 1  disciplina  
-
-
-professor N -- 1 departamento
-
-
-
-professor N --- N formacao[cursos]
-professor(!)
-professor_curso (!,&,&)
-cursos
-
-
-professor N --- N inst_ensino (!,)
-professor(!)
-prof_inst_ens(!,&,&)
-inst_ensino(!)
-
 
 
  
