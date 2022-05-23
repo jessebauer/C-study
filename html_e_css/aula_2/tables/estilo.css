@@ -1,0 +1,13 @@
+table, th, td{
+    border: 2px inset pink; /* Tipos de tabela: solid, groove, inset, outset, etc */
+    border-radius: 10px;
+}
+table {
+    background-color: pink;
+}
+th {
+    background-color: red;
+}
+td {
+    background-color: salmon;
+}
