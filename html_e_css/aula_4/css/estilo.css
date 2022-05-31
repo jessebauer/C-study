@@ -1,0 +1,14 @@
+* {
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.p { 
+    background-color: blueviolet;
+
+}
+p {
+    color: white;
+}
+.test   {background-color: turquoise;
+    color:black}
