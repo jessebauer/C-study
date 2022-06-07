@@ -20,6 +20,9 @@ nav {
     background-color: #3d9ef273;
     font-size: 20px;
 }
+.conteudo {
+    display: inline-block;
+}
 
 .link1,
 .link2,
@@ -28,7 +31,7 @@ nav {
     background-color: #0093c8;
     display: inline;
     float: right;
-    margin-top: -3px;
+    margin-top: -2px;
     margin-left: 3px;
     padding: 10px;
     color: white;
@@ -72,7 +75,7 @@ footer {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    margin: -80px 0 0 12px;
+    margin-left: 12px;
 }
 
 img {
