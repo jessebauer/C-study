@@ -36,10 +36,10 @@ nav {
     text-decoration: none;
 }
 
-.bt1:hover,
-.bt2:hover,
-.bt3:hover,
-.bt4:hover {
+.link1:hover,
+.link2:hover,
+.link3:hover,
+.link4:hover {
     background-color: rgb(16, 109, 231);
 }
 
@@ -50,6 +50,10 @@ nav {
     background-position: center;
     background-size: cover;
     padding-bottom: 20%;
+}
+
+p {
+    margin-top: 10px;
 }
 
 footer {
