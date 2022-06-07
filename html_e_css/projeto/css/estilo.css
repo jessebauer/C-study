@@ -28,8 +28,7 @@ nav{
 }
 
 .bt1:hover,.bt2:hover,.bt3:hover,.bt4:hover {
-    background-color: white;
-    opacity: 60%;
+    background-color: rgb(16, 109, 231);
 }
 
 .img {
