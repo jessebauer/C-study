@@ -28,7 +28,7 @@ nav {
     background-color: #0093c8;
     display: inline;
     float: right;
-    margin-top: -2px;
+    margin-top: -3px;
     margin-left: 3px;
     padding: 10px;
     color: white;
@@ -49,13 +49,9 @@ nav {
     background-image: url('../image/background.png');
     background-position: center;
     background-size: cover;
-    padding-bottom: 100%;
+    padding-bottom: 20%;
 }
-aside{
-    background-color: white;
-    width: 200px;
-    height: 900px;
-}
+
 p {
     margin-top: 10px;
 }
@@ -70,27 +66,29 @@ footer {
     font-size: 15px;
 }
 
-.rounded {
+.image-cropper {
     width: 350px;
     height: 350px;
+    position: relative;
+    overflow: hidden;
     border-radius: 50%;
-    margin-left: 12px;
+    margin: -80px 0 0 12px;
 }
 
 img {
+    display: inline;
+    margin: 0 auto;
     height: 100%;
     width: 100%;
 }
 
 .sobre {
-    min-width: 55%;
-    height:fit-content;
-    margin: 30px;
+    position: inherit;
+    margin: -200px auto 0 400px;
+    max-width: 55%;
+    height: 500px;
     background-color: #006699;
     color: white;
     border-radius: 10px;
     padding: 10px;
-}
-.container,.conteudo{
-    display: flex;
 }

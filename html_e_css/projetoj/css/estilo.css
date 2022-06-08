@@ -1,0 +1,177 @@
+* {
+    font-family: montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: white
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+
+}
+
+body::-webkit-scrollbar-track {
+    background: #006699;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid #006699;
+}
+
+body {
+    text-align: center;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    background-image: url('../image/background.png');
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 100%
+}
+
+nav a:hover {
+    color: #7ecdf5;
+}
+
+header {
+    color: #fff;
+    display: flex;
+    padding: 2% 0 0 2%;
+    background-color: #3D5473;
+    height: auto;
+    font-size: 36px;
+    border-bottom: 3px solid #94c2ff;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    float: right;
+}
+
+nav a {
+    display: inline;
+    float: right;
+    margin: 0px 45px;
+    padding: 10px;
+    color: white;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.apresentacao {
+    margin-top: 70px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: 700;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: down 2s ease;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down {
+    from {
+        opacity: 0;
+        margin-top: -150px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 70px;
+    }
+}
+
+.titulo {
+    color: white;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cargo {
+    color: white;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sobre {
+    padding-bottom: 20px;
+    padding-top: 75px;
+    color: white;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: left 4s ease-in;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes left {
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+
+.rounded {
+    padding: 40px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 20px;
+}
+
+.seta {
+    margin-top: 10px;
+}
+
+#prog {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    color: white;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: right 5s ease-in;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes right {
+    from {
+        opacity: 0;
+        margin-left: 1000px;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
