@@ -8,9 +8,9 @@
     <title>Cabeçalho</title>
 </head>
 
-<body>
+<body onload="paginaCarregada()">
     <header>
-        <h1>Cabeçalho</h1>
+        <h1 onclick="clickNoCabecalho()">Cabeçalho</h1>
     </header>
     <aside>
         <h1>Corpo</h1>
@@ -18,7 +18,16 @@
     <footer>
         <h1>rodape</h1>
     </footer>
+    <script type="text/javascript">
+        const paginaCarregada = () => {
+            alert('A página carregou')
+        }
 
+        const clickNoCabecalho = function () {
+            alert('Você clicou')
+        }
+
+    </script>
 
 
 </body>
