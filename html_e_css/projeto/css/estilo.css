@@ -20,9 +20,6 @@ nav {
     background-color: #3d9ef273;
     font-size: 20px;
 }
-.conteudo {
-    display: inline-block;
-}
 
 .link1,
 .link2,
@@ -52,9 +49,13 @@ nav {
     background-image: url('../image/background.png');
     background-position: center;
     background-size: cover;
-    padding-bottom: 20%;
+    padding-bottom: 100%;
 }
-
+aside{
+    background-color: white;
+    width: 200px;
+    height: 900px;
+}
 p {
     margin-top: 10px;
 }
@@ -69,29 +70,27 @@ footer {
     font-size: 15px;
 }
 
-.image-cropper {
+.rounded {
     width: 350px;
     height: 350px;
-    position: relative;
-    overflow: hidden;
     border-radius: 50%;
     margin-left: 12px;
 }
 
 img {
-    display: inline;
-    margin: 0 auto;
     height: 100%;
     width: 100%;
 }
 
 .sobre {
-    position: inherit;
-    margin: -200px auto 0 400px;
-    max-width: 55%;
-    height: 500px;
+    min-width: 55%;
+    height:fit-content;
+    margin: 30px;
     background-color: #006699;
     color: white;
     border-radius: 10px;
     padding: 10px;
+}
+.container,.conteudo{
+    display: flex;
 }
