@@ -9,16 +9,38 @@
 </head>
 
 <body onload="paginaCarregada()">
-    <header>
-        <h1 onclick="clickNoCabecalho()">Cabeçalho</h1>
+    <header id="cabecalho" onmouseover="efeito_no_header(this)" onmouseleave=" efeito_no_header_normal(this)" ">
+        <h1 onclick=" clickNoCabecalho()">Cabeçalho</h1>
     </header>
     <aside>
+        <button type="button" onclick="trocar_cabecalho()">
+            Trocar cabeçalho
+        </button>
+        <button type="button" onclick="zerar()">
+            Zerar</button>
         <h1>Corpo</h1>
     </aside>
     <footer>
         <h1>rodape</h1>
     </footer>
     <script type="text/javascript">
+        let contador = 0
+        const trocar_cabecalho = () => {
+
+            let cabecalho = document.getElementById('cabecalho');
+            contador++
+            cabecalho.innerHTML = `<h1>Mudou ${contador}</h1>`
+
+        }
+        const zerar = () => {
+            let zerador = document.getElementById('cabecalho')
+            contador = 0
+
+        }
+        setInterval(() => {
+            trocar_cabecalho()
+        }, 1);
+
         const paginaCarregada = () => {
             alert('A página carregou')
         }
@@ -26,6 +48,26 @@
         const clickNoCabecalho = function () {
             alert('Você clicou')
         }
+        const efeito_no_header = (element) => {
+            // console.log(element);
+            element.style.color = "red"
+            //element.innerText = "Mouse entrou!"
+            element.innerHTML = "<h1>MouseEntrou</h1> "
+            //usado para imbutir um novo elemento html
+
+        }
+
+        const efeito_no_header_normal = (element) => {
+            element.style.color = "black"
+            element.innerHTML = "<h1>MouseSaiu</h1>"
+            //usado para trocar apenas texto
+
+        }
+
+
+        //usado para imbutir um novo elemento html
+
+
 
     </script>
 
