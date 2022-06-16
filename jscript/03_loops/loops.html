@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="lista">
+
+    </ul>
+    <button type="button" onclick="addItem()">Adicionar Item</button>
+    <script type="text/javascript">
+        const ulLista = document.getElementById('lista');
+        const addItem = () => {
+            const valor = prompt('Informe um Item para a lista.');
+            // console.log(valor);
+            ulLista.innerHTML += `Tabuada do número ${valor}`
+            for (let i = 0; i <= 10; i++) {
+                ulLista.innerHTML += `<li>${i} x ${valor} = ${valor * i}</li>`;
+
+
+                console.log(i * parseFloat(valor));
+            }
+            ulLista.innerHTML += '<br>'
+
+        }
+
+        // Loops
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

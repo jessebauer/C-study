@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lista {
+            padding: 20px;
+
+        }
+
+        ul {
+            margin-bottom: 10px;
+            list-style-type: none;
+            border: 2px solid black;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .deletar {
+            color: red;
+            cursor: pointer;
+        }
+
+        button {
+            margin-left: 50%;
+            margin-right: 50%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="lista">
+
+    </div>
+    <button type="button" onclick="addItem()">Adicionar Item</button>
+    <script type="text/javascript">
+        const ulLista = document.getElementById('lista');
+        const addItem = () => {
+            let lista = "";
+            const valor = Number(prompt('Informe um Item para a lista.'));
+            if (valor > 0 && valor != null && valor != undefined) {
+                // console.log(valor);
+                lista += '<ul>';
+                lista += `<h2>Tabuada do número ${valor} <span class="deletar" onclick="remover(this.parentNode.parentNode)">Deletar</span></h2>`;
+                for (let i = 0; i <= 10; i++) {
+                    lista += `<li>${i} x ${valor} = ${valor * i}</li>`;
+
+                }
+                lista += '</ul>';
+                ulLista.innerHTML += lista;
+            }
+        };
+
+        const remover = (elemento) => {
+            const eh_para_remover = confirm('Deseja realmente remover?'); // confirm sempre devolve um booleano > true=ok e false=cancelar
+            const elementoPai = elemento.getParentNode;
+
+            console.log(elemento);
+            if (eh_para_remover == true) {
+                elemento.innerHTML = null;
+                alert('Conteúdo removido com sucesso')
+            }
+
+        };
+        // Loops
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
