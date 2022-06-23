@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        form {
+            margin-left: 25%;
+        }
+
+        .input-form {
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="ok" style="float:right; background:blue; margin-right:30%"></div>
+
+    <form name="form_login">
+        <div class="input-form">
+            <label>Login</label>
+            <input id="login" type="text">
+        </div>
+        <div class="input-form">
+            <label>Senha</label>
+            <input id="senha" type="password">
+        </div>
+        <div class="input-form">
+            <button id="buttonSenha" type="button" onclick="realizarLogin()">Entrar</button>
+        </div>
+        <div id="nOk" style="background:red; margin:6px; width:fit-content">Credenciais inválidas</div>
+    </form>
+
+
+    <script type="text/javascript">
+
+        const testeVerificarLogin = (login, senha) => {
+            // Parte do banco de dados com o login e senha corretos.
+            if (login == 'maria@asdrubal.corp' && senha == '123') {
+                // alert('Bem vinda Maria. Você está logada');
+                // Criar div e mostrar mensagem no canto superior direito.
+                const captureButton = document.getElementById("login");
+                document.getElementById("nOk").style.display = "none";
+                document.getElementById("ok").style.display = "block";
+                document.getElementById("ok").innerHTML = 'Bem vinda Maria. Você está logada'
+            } else {
+                // alert('Credenciais inválidas');
+                const captureButton = document.getElementById("login");
+                captureButton.parentNode.innerHTML += ''
+                document.getElementById("ok").style.display = "none";
+                document.getElementById("nOk").style.display = "block";
+                document.getElementById("nOk").innerHTML = 'Credenciais inválidas'
+                // Aparecer mensagem abaixo do botão de login
+            }
+        };
+        const validarInputs = (login, senha, inputLogin, inputSenha) => {
+            if (!login.includes('@') || !login.includes('.')) {
+                alert('Login inválido')
+                inputLogin.style.borderColor = "red";
+                inputLogin.style.color = "red";
+            }
+            // document.getElementById('login').value = ''; 
+            // document.getElementById('senha').value = '';
+            if (senha == undefined || senha == '') {
+                inputSenha.style.borderColor = "red";
+                inputSenha.style.color = "red";
+            }
+        }
+        const realizarLogin = () => {
+            // Captura a senha digitada
+            const inputLogin = document.getElementById("login");
+            const inputSenha = document.getElementById("senha");
+            const senha = inputSenha.value;
+            const login = inputLogin.value;
+            console.log(login, senha);
+            console.log('Existe o termo @ na string?', login.includes('@'));
+            console.log('Existe o termo . na string?', login.includes('.'));
+            validarInputs(login, senha, inputLogin, inputSenha);
+            testeVerificarLogin(login, senha);
+            inputSenha.value('');
+            inputLogin.value('');
+        };
+
+    </script>
+
+
+
+</body>
+
+</html>
