@@ -1,0 +1,19 @@
+form {
+    width: 500px;
+    margin-left: 20%;
+    margin-top: 75px;
+    padding: 10px;
+    border: 2px black solid;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: rgb(139, 13, 8);
+}
+
+a {
+    padding-right: 15px;
+}
+
+.incorreto {
+    color: red;
+    display: block;
+}
