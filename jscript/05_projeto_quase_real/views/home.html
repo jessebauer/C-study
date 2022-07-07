@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="../assents/css/produtos.css">
 </head>
 
 <body>
@@ -18,7 +19,15 @@
         <br>
         <button type="button" onclick="retornarLogin()">Voltar</button>
     </header>
+    <br>
+    <div><button type="button" id="filtro01">Filtrar Apenas em Estoque</button>
+        <h3>Media dos preços: <div id="media"></div>
+        </h3>
+    </div>
+    <div id="listaProdutos"></div>
+
     <script type="text/javascript" src="../assents/js/home.js"></script>
+    <script type="text/javascript" src="../assents/js/funcoes_funcionais.js"></script>
 </body>
 
 </html>

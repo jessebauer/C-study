@@ -12,7 +12,7 @@ const retornarLogin = () => {
     // localStorage.removeItem("usuarioLogado") apagar unidade
 }
 
-document.getElementById("test").onclick = () => {
+document.getElementById("usuario-logado").onclick = () => {
     window.location.assign("../index.html");
     localStorage.clear();
 }
