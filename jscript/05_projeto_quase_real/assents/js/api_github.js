@@ -1,6 +1,7 @@
 function renderizaFoto(foto) {
     const imgFoto = document.getElementById('foto');
     imgFoto.src = `${foto}`;
+
 }
 
 
@@ -9,6 +10,7 @@ fetch("https://api.github.com/users/jessebauer")
     .then(data => {
         console.log(data);
         renderizaFoto(data.avatar_url);
+        document.getElementById('nome').innerText = data.name;
     })
     .catch(error => { // para status de erro
         console.error('algo deu errado na requisição', error);
