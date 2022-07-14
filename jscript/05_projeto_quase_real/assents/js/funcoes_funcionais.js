@@ -58,9 +58,9 @@ const produtosEmEstoque = vetorProduto.filter(emEstoque);
 console.log('Filter: ', produtosEmEstoque);
 
 const converterDolar = (elemento) => {
-
-    vetorProduto.preco = (elemento.preco / 5.43).toFixed(2);
-    return vetorProduto;
+    const novoElemento = { ...elemento }
+    novoElemento.preco = (novoElemento.preco / 5.43);
+    return novoElemento;
 }
 const produtosEmDolar = [vetorProduto].map(converterDolar);
 
@@ -97,7 +97,7 @@ const exibirProdutos = (vetor) => {
     <div class="produto">
     <h1>${elemento.produto}</h1>
     <p>${elemento.descricao}</p>
-    <h5>R$ ${elemento.preco}</h5>
+    <h5>R$ ${elemento.preco.toFixed(2)}</h5>
     </div>
     `;
         divListaProdutos.innerHTML += divProduto;
@@ -111,19 +111,67 @@ let estadoFiltroEstoque = false;
 
 const btnFiltraApenasEstoque = document.getElementById('filtro01');
 
+const mediaDefault = (vetor) => {
+    const capturaMediaFiltrada = document.getElementById('media');
+
+    const soma_preco = vetor.reduce(somaPrecos, 0);
+
+    capturaMediaFiltrada.innerHTML = "R$ " + (soma_preco / vetor.length).toFixed(2);
+}
+
+mediaDefault(vetorProduto);
+
+const vetorFiltrado = vetorProduto.filter(emEstoque);
+
 btnFiltraApenasEstoque.onclick = () => {
     estadoFiltroEstoque = !estadoFiltroEstoque;
     if (estadoFiltroEstoque) {
-        const vetorFiltrado = vetorProduto.filter(emEstoque);
         exibirProdutos(vetorFiltrado);
         btnFiltraApenasEstoque.innerHTML = "Remover Filtro Apenas em Estoque";
-        mediaValor = document.getElementById('media')
-        mediaValor.innerHTML = vetorFiltrado.reduce(total, elemento.preco, 0);
+        const capturaMediaFiltrada = document.getElementById('media');
+
+        const mediaExibida = vetorFiltrado.reduce((totalizador, elemento) => {
+            return totalizador + elemento.preco
+        }, 0);
+        capturaMediaFiltrada.innerHTML = "R$ " + mediaExibida / vetorFiltrado.length;
     } else {
         exibirProdutos(vetorProduto);
         btnFiltraApenasEstoque.innerHTML = "Filtrar Apenas em Estoque"
+        const capturaMediaFiltrada = document.getElementById('media');
+        const mediaExibida = vetorProduto.reduce((totalizador, elemento) => {
+            return totalizador + elemento.preco
+        }, 0);
+        capturaMediaFiltrada.innerHTML = "R$ " + mediaExibida / vetorProduto.length;
     }
 }
+
+
+const dolarOnOff = document.getElementById('emDolar')
+
+let clicado = false;
+dolarOnOff.onclick = () => {
+    if (!clicado) {
+        clicado = true;
+        console.log('liga');
+        const vetorConvertido = vetorProduto.map(converterDolar);
+        mediaDefault(vetorConvertido);
+        exibirProdutos(vetorConvertido);
+    } else {
+        console.log('desliga');
+        clicado = false;
+        mediaDefault(vetorProduto);
+        exibirProdutos(vetorProduto);
+    }
+}
+
+
+
+
+// const somaPrecos = (totalizador, elemento) => {
+//     return totalizador + elemento.preco;
+// }
+
+// const mediaPreco = (vetorProduto.reduce(somaPrecos, 0)).toFixed(2);
 
 // Mostrar a média dos preços dos produtos exibidos em tela
 // Botão para exibir o preço em dolar
